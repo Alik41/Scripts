@@ -1,0 +1,57 @@
+-- Warning Sign
+
+-- Instances:
+
+local message = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local warning = Instance.new("TextLabel")
+local TEXTWARNING = Instance.new("TextLabel")
+local okbutton = Instance.new("TextButton")
+
+--Properties:
+
+message.Name = "message"
+message.Parent = game.Workspace
+
+main.Name = "main"
+main.Parent = message
+main.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+main.Size = UDim2.new(0, 1352, 0, 945)
+main.Active = true
+main.Visible = true
+
+warning.Name = "warning"
+warning.Parent = main
+warning.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+warning.BorderColor3 = Color3.fromRGB(31, 31, 31)
+warning.Size = UDim2.new(0, 1343, 0, 208)
+warning.Font = Enum.Font.ArialBold
+warning.Text = "WARNING!"
+warning.TextColor3 = Color3.fromRGB(255, 0, 4)
+warning.TextSize = 100.000
+
+TEXTWARNING.Name = "TEXT WARNING"
+TEXTWARNING.Parent = main
+TEXTWARNING.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+TEXTWARNING.BorderColor3 = Color3.fromRGB(31, 31, 31)
+TEXTWARNING.Position = UDim2.new(0, 0, 0.179894179, 0)
+TEXTWARNING.Size = UDim2.new(0, 1337, 0, 106)
+TEXTWARNING.Font = Enum.Font.ArialBold
+TEXTWARNING.Text = "YOU CAN BE BANNED USING THIS SCRIPT! DONT DO IT IF YOU WANT TO KEEP YOUR ACCOUNT UNBANNED OR USE AN ALT ACCOUNT!"
+TEXTWARNING.TextColor3 = Color3.fromRGB(255, 0, 4)
+TEXTWARNING.TextSize = 21.000
+TEXTWARNING.TextStrokeColor3 = Color3.fromRGB(255, 0, 4)
+
+okbutton.Name = "ok button"
+okbutton.Parent = main
+okbutton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+okbutton.BorderColor3 = Color3.fromRGB(31, 31, 31)
+okbutton.Position = UDim2.new(0.370562136, 0, 0.855026484, 0)
+okbutton.Size = UDim2.new(0, 324, 0, 92)
+okbutton.Font = Enum.Font.ArialBold
+okbutton.Text = "I Agree!"
+okbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+okbutton.TextSize = 62.000
+okbutton.MouseButton1Down:connect(function()
+	main.Visible = false
+end)
